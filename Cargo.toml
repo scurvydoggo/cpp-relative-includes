@@ -1,5 +1,5 @@
 [package]
-name = "lyra-plugin-tool"
+name = "cpp-relative-includes"
 version = "0.1.0"
 edition = "2021"
 

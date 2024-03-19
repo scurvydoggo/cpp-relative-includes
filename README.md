@@ -1,14 +1,14 @@
-# lyra-plugin-tool
+# cpp-relative-includes
 
-Using [Lyra](https://x157.github.io/UE5/LyraStarterGame/) I'd like to depend on
-`Source/` from my plugin, however this isn't possible since it isn't
-pluginified.
+Rewrites `#include`s to be relative rather than absolute, relative to the
+project root.
 
-This tool will migrate content of `Source/` into two plugins: `LyraGame` and
-`LyraEditor`.
+Some build tools may require relative paths, which can be an issue when porting
+code that uses absolute paths.
 
-This was necessary because the way that `#include` directives are defined isn't
-compatible and so a rewrite is required (from absolute to relative paths).
+This is probably pretty niche. I needed this when porting the
+[Lyra](https://x157.github.io/UE5/LyraStarterGame/) Unreal Engine project
+`Source/` directory into a Game Feature Plugin.
 
 ## Usage
 
