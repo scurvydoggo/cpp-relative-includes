@@ -1,4 +1,5 @@
 use std::collections::HashSet;
+use std::fs;
 use std::fs::File;
 use std::io::BufRead;
 use std::io::BufReader;
@@ -81,7 +82,8 @@ fn main() -> Result<()> {
         }
 
         if did_modify {
-            println!("{modified_content}");
+            println!("Rewriting {}", source_path.to_string_lossy());
+            fs::write(source_path, modified_content)?;
         }
     }
 
